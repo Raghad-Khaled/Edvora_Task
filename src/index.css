@@ -1,0 +1,49 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(50, 50, 50);
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.usercard{
+  margin: auto;
+  margin-bottom: 20px;
+}
+.center {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+Card{
+  width: 100%;
+}
+.red{
+background-color: rgb(92, 81, 245);
+text-align: center;
+font-size: x-large;
+}
+
+.btn{
+  width: 100%;
+}
+.user{
+  font-size: larger;
+  font-weight: bolder;
+}
+.Drop{
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.FormControl{
+margin-top: 10px;
+}
