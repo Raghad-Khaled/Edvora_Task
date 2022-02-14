@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/Edvora_Task/static/css/main.47561b1f.chunk.css",
-    "main.js": "/Edvora_Task/static/js/main.5b3919ce.chunk.js",
-    "main.js.map": "/Edvora_Task/static/js/main.5b3919ce.chunk.js.map",
+    "main.js": "/Edvora_Task/static/js/main.0c1e4fe5.chunk.js",
+    "main.js.map": "/Edvora_Task/static/js/main.0c1e4fe5.chunk.js.map",
     "runtime-main.js": "/Edvora_Task/static/js/runtime-main.2f57993a.js",
     "runtime-main.js.map": "/Edvora_Task/static/js/runtime-main.2f57993a.js.map",
     "static/css/2.56117e3b.chunk.css": "/Edvora_Task/static/css/2.56117e3b.chunk.css",
-    "static/js/2.9ffd6e11.chunk.js": "/Edvora_Task/static/js/2.9ffd6e11.chunk.js",
-    "static/js/2.9ffd6e11.chunk.js.map": "/Edvora_Task/static/js/2.9ffd6e11.chunk.js.map",
+    "static/js/2.96253da2.chunk.js": "/Edvora_Task/static/js/2.96253da2.chunk.js",
+    "static/js/2.96253da2.chunk.js.map": "/Edvora_Task/static/js/2.96253da2.chunk.js.map",
     "index.html": "/Edvora_Task/index.html",
     "static/css/2.56117e3b.chunk.css.map": "/Edvora_Task/static/css/2.56117e3b.chunk.css.map",
     "static/css/main.47561b1f.chunk.css.map": "/Edvora_Task/static/css/main.47561b1f.chunk.css.map",
-    "static/js/2.9ffd6e11.chunk.js.LICENSE.txt": "/Edvora_Task/static/js/2.9ffd6e11.chunk.js.LICENSE.txt",
+    "static/js/2.96253da2.chunk.js.LICENSE.txt": "/Edvora_Task/static/js/2.96253da2.chunk.js.LICENSE.txt",
     "static/media/styles.css": "/Edvora_Task/static/media/revicons.e8746a62.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.2f57993a.js",
     "static/css/2.56117e3b.chunk.css",
-    "static/js/2.9ffd6e11.chunk.js",
+    "static/js/2.96253da2.chunk.js",
     "static/css/main.47561b1f.chunk.css",
-    "static/js/main.5b3919ce.chunk.js"
+    "static/js/main.0c1e4fe5.chunk.js"
   ]
 }
