@@ -4,6 +4,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import PropTypes from 'prop-types';
 
 /**
  * Component for render tag with its name and two images and the blog can follow that tag
@@ -18,7 +19,7 @@ import ImageListItem from '@mui/material/ImageListItem';
  */
 
 export default function Card({
-  name, prand, price, date, location, discription,image
+  name, brand, price, date, location, discription,image
 }) {
   const margin={marginBottom: '10px' }
   const cmargin= {marginBottom: '10px', color:'#f0f8ff82' }
@@ -28,7 +29,7 @@ export default function Card({
       sx={{
         '& > :not(style)': {
           m: 1,
-          width: 260,
+          width: 250,
           height: 190,
           p: 2,
         },
@@ -36,7 +37,7 @@ export default function Card({
     >
       <Paper style={{ backgroundColor:  '#232323' , margin: 'auto', color:'white' }} elevation={3}>
       <Grid container spacing={2}>
-      <Grid item xs={6}  >
+      <Grid item xs={5}  >
                <ImageList sx={{
                 borderRadius: 1, mt: 0.5
               }}
@@ -45,7 +46,7 @@ export default function Card({
                   <img
                     src={image}
                     alt="Cardimage"
-                    style={{ width: '80px', height: '80px', marginBottom:'10px' }}
+                    style={{ width: '80px', height: '80px', marginBottom:'10px', borderRadius:'5px' }}
                   />
                 </ImageListItem>
               </ImageList>
@@ -54,9 +55,9 @@ export default function Card({
         {location.city}
         </div> 
         </Grid>
-        <Grid item xs={6} >
+        <Grid item xs={7} >
           <div style={margin}> {name} </div>
-          <div style={cmargin}>{prand} </div>
+          <div style={cmargin}>{brand} </div>
           <div style={margin}> $ {price}</div>
           <div style={cmargin}> date: {date.slice(0,10)}</div>
           </Grid> 
@@ -68,4 +69,17 @@ export default function Card({
  
 
 }
+
+Card.propTypes = {
+
+    name:PropTypes.string.isRequired,
+    brand:PropTypes.string.isRequired,
+    price:PropTypes.number.isRequired,
+    location: PropTypes.shape({
+      state: PropTypes.string.isRequired, city: PropTypes.string.isRequired,
+    }).isRequired,
+    discription:PropTypes.string.isRequired,
+    date:PropTypes.string.isRequired,
+    image:PropTypes.string.isRequired,
+};
 

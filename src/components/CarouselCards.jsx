@@ -2,32 +2,38 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import Card from './Card';
+import Box from '@mui/material/Box';
+import PropTypes from 'prop-types';
 
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 7,
+    breakpoint: { max: 4000, min: 2000 },
+    items: 5,
   },
   desktoplarge: {
-    breakpoint: { max: 3000, min: 1500 },
-    items: 5,
+    breakpoint: { max: 2000, min: 1500 },
+    items: 4,
   },
   desktop: {
     breakpoint: { max: 1500, min: 900 },
-    items: 4,
+    items: 3,
   },
   tablet: {
-    breakpoint: { max: 900, min: 700 },
-    items: 4,
+    breakpoint: { max: 1125, min: 900 },
+    items: 2,
   },
   phone: {
-    breakpoint: { max: 700, min: 480 },
+    breakpoint: { max: 900, min: 800 },
     items: 3,
   },
   mobile: {
-    breakpoint: { max: 480, min: 0 },
+    breakpoint: { max: 800, min: 670 },
     items: 2,
+  },
+  smobile: {
+    breakpoint: { max: 670, min: 0 },
+    items: 1,
   },
 };
 /**
@@ -43,14 +49,14 @@ const responsive = {
  */
 export default function CarouselCards({data, productname}) {
   return (
-    <div>
+    <Box  sx={{backgroundColor: 'black', borderRadius: '15px', padding:2, marginTop:3 }} >
       <Carousel responsive={responsive}>
         {
           data.filter(product => product.product_name===productname)
             .map((product) => (
               <div key={Math.random()}> <Card 
                 name={product.product_name}
-                prand={product.brand_name}
+                brand={product.brand_name}
                 price={product.price}
                 date={product.date}
                 location={product.address}
@@ -60,6 +66,21 @@ export default function CarouselCards({data, productname}) {
             ))
          }
       </Carousel>
-    </div>
+    </Box>
   );
 }
+
+CarouselCards.propTypes = {
+  data:PropTypes.arrayOf( PropTypes.shape({
+    product_name:PropTypes.string.isRequired,
+    brand_name:PropTypes.string.isRequired,
+    price:PropTypes.number.isRequired,
+    address: PropTypes.shape({
+      state: PropTypes.string.isRequired, city: PropTypes.string.isRequired,
+    }).isRequired,
+    discription:PropTypes.string.isRequired,
+    date:PropTypes.string.isRequired,
+    image:PropTypes.string.isRequired,
+  }).isRequired),
+  productname: PropTypes.string.isRequired,
+};
