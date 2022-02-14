@@ -44,7 +44,7 @@ const responsive = {
  * CarouselCards
  * @example
  * return (
- *   <CarouselCards  />
+ *   <CarouselCards data=[{"product_name":"Microsoft inc","brand_name":"Microsoft","price":200,"address":{"state":"Tamil Nadu","city":"Vadipatti"},"discription":"Its a good product","date":"2012-06-25T00:11:29.171Z","time":"2018-12-18T11:25:28.042Z","image":"https://w7.pngwing.png"}] productname="Microsoft inc" />
  * )
  */
 export default function CarouselCards({data, productname}) {

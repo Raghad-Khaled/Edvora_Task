@@ -7,14 +7,15 @@ import ImageListItem from '@mui/material/ImageListItem';
 import PropTypes from 'prop-types';
 
 /**
- * Component for render tag with its name and two images and the blog can follow that tag
+ * Component for render Card for each product with its info
  * that use in {@link CarouselCards}
  * @component
  * @name
- * FollowCard
+ * Card
  * @example
  * return (
- *   <FollowCard image1="book1.com" image2="book2.com" tag="book" />
+ *   <Card name="Microsoft inc" brand="Microsoft" date="2012-06-25T00:11:29.171Z" location={"state":"Tamil Nadu","city":"Vadipatti"}
+ *  discription:"Its a good product" image="image.png" />
  * )
  */
 
@@ -59,7 +60,7 @@ export default function Card({
           <div style={margin}> {name} </div>
           <div style={cmargin}>{brand} </div>
           <div style={margin}> $ {price}</div>
-          <div style={cmargin}> date: {date.slice(0,10)}</div>
+          <div style={cmargin}> Date: {date.slice(0,10).replaceAll('-',':')}</div>
           </Grid> 
         </Grid>
         <div style={cmargin}> {discription} </div>

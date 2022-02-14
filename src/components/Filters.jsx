@@ -39,7 +39,7 @@ const useStyles = makeStyles({
 
 
 
-function Filters({Products,handleproducts,States, handlestate, Cities, handlecity , data}) {
+function Filters({Products,handleproducts,States, handlestate, Cities, handlecity , data }) {
    /*to get array unique of products */
     const products = data.map(function (product) { return product.product_name; });
    let fproducts = products.filter((element, index) => {
@@ -47,17 +47,19 @@ function Filters({Products,handleproducts,States, handlestate, Cities, handlecit
    });
 
     /*to get array unique of states */
-   const states = data.map(function (product) { return product.address.state; });
+   const states = data.filter(product=> Products===''|| product.product_name === Products)
+                      .map(function (product) { return product.address.state; });
    let fstates = states.filter((element, index) => {
     return states.indexOf(element) === index;
    });
    
    /*to get array unique of cities */
-   const cities = data.map(function (product) { return product.address.city; });
+   const cities = data.filter(product=>States===''|| product.address.state === States)
+                      .map(function (product) { return product.address.city; });
    let fcities = cities.filter((element, index) => {
     return cities.indexOf(element) === index;
    });
-   console.log(fcities)
+
    const margin={ marginTop: '20px' };
    const centered={ marginLeft: 10,top:"50%",transform:"translate(0,-50%" }
    const classes = useStyles()

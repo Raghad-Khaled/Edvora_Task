@@ -20,17 +20,17 @@ function HomePage() {
 
     fetchMyAPI()
   }, [])
-
+ 
+  /*filtered data that should be show*/
   const [Fdata, setFData] = useState([]);
 
-   console.log(data);
    const products = Fdata.map(function (product) { return product.product_name; });
    let fproducts = products.filter((element, index) => {
     return products.indexOf(element) === index;
    });
-   console.log(fproducts)
 
 
+    /*filter data acording to the selected Product*/
    const [Product, setProduct] = React.useState('');
 
    const handleproduct = (event) => {
@@ -40,6 +40,7 @@ function HomePage() {
     setFData(filtereddata)
    };
  
+    /*filter data acording to the selected State*/
    const [State, setState] = React.useState('');
 
    const handlestate = (event) => {
@@ -49,6 +50,7 @@ function HomePage() {
    setFData(filtereddata)
    };
 
+   /*filter data acording to the selected City*/
    const [City, setCity] = React.useState('');
 
    const handlecity = (event) => {
@@ -64,7 +66,7 @@ function HomePage() {
       (<Box sx={{ margin: 3}}>
       <Grid container spacing={3}>
         <Grid item xs={12} md={2}  >
-          <Filters Products={Product} handleproducts={handleproduct} States={State} handlestate={handlestate} Cities={City} handlecity={handlecity} data={Fdata} />
+          <Filters Products={Product} handleproducts={handleproduct} States={State} handlestate={handlestate} Cities={City} handlecity={handlecity} data={data} />
         </Grid>
         <Grid item xs={12} md={10} >
           <h1>Edvora</h1>
