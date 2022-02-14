@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Edvora_Task/static/css/main.47561b1f.chunk.css",
-    "main.js": "/Edvora_Task/static/js/main.0c1e4fe5.chunk.js",
-    "main.js.map": "/Edvora_Task/static/js/main.0c1e4fe5.chunk.js.map",
+    "main.js": "/Edvora_Task/static/js/main.7f02f07e.chunk.js",
+    "main.js.map": "/Edvora_Task/static/js/main.7f02f07e.chunk.js.map",
     "runtime-main.js": "/Edvora_Task/static/js/runtime-main.2f57993a.js",
     "runtime-main.js.map": "/Edvora_Task/static/js/runtime-main.2f57993a.js.map",
     "static/css/2.56117e3b.chunk.css": "/Edvora_Task/static/css/2.56117e3b.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.56117e3b.chunk.css",
     "static/js/2.96253da2.chunk.js",
     "static/css/main.47561b1f.chunk.css",
-    "static/js/main.0c1e4fe5.chunk.js"
+    "static/js/main.7f02f07e.chunk.js"
   ]
 }
